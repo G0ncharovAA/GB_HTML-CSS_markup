@@ -13,6 +13,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -594,6 +595,12 @@ summary::-webkit-details-marker {
   -ms-flex-align: center;
   align-items: center;
   gap: 10px;
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .sort__content {
@@ -614,6 +621,45 @@ summary::-webkit-details-marker {
   z-index: 1;
   top: 22px;
   left: -9px;
+}
+
+.sort__label {
+  @include flexCenter();
+  justify-content: flex-start;
+  color: #6F6E6E;
+  gap: 9px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sort__check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sort__check::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+}
+
+.sort__check:checked::before {
+  background-color: $pink-color;
 }
 
 .button {
@@ -1062,6 +1108,10 @@ summary::-webkit-details-marker {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.gone {
+  display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
