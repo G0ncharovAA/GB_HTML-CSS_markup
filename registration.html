@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_nested.css">
 </head>
 
 <body>
@@ -60,85 +61,35 @@
         </div>
     </header>
     <section class="head center">
-        <h2 class="head__heading">SHOPPING CART </h2>
+        <h2 class="head__heading">REGISTRATION</h2>
     </section>
-    <div class="cart_content center">
-        <div class="cart_items_and_buttons">
-            <div class="cart_items">
-                <div class="cart_card">
-                    <img src="img/cart_item1.png" class="cart_img" alt="item1" />
-                    <div class="cart_details">
-                        <h2 class="cart_item_header">
-                            MANGO PEOPLE<br>T-SHIRT
-                        </h2>
-                        <p class="cart_item_price">
-                            Price: <span class="pink">$300</span>
-                        </p>
-                        <p class="cart_item_details">
-                            Color: <span class="grey">Red</span>
-                        </p>
-                        <p class="cart_item_details">
-                            Size: <span class="grey">Xl</span>
-                        </p>
-                        <div class="cart_item_quantity_container">
-                            <p class="cart_item_details">Quantity:</p>
-                            <input type="text" class="cart_item_quantity_input" value="2" />
-                        </div>
-                    </div>
-                    <svg class="cart_close" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 18 18" fill="none">
-                        <path
-                            d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                            fill="#575757" />
-                    </svg>
-                </div>
-                <div class="cart_card">
-                    <img src="img/cart_item2.png" class="cart_img" alt="item1" />
-                    <div class="cart_details">
-                        <h2 class="cart_item_header">
-                            MANGO PEOPLE<br>T-SHIRT
-                        </h2>
-                        <p class="cart_item_details">
-                            Price: <span class="pink">$300</span>
-                        </p>
-                        <p class="cart_item_details">
-                            Color: <span class="grey">Red</span>
-                        </p>
-                        <p class="cart_item_details">
-                            Size: <span class="grey">Xl</span>
-                        </p>
-                        <div class="cart_item_quantity_container">
-                            <p class="cart_item_details">Quantity:</p>
-                            <input type="text" class="cart_item_quantity_input" value="2" />
-                        </div>
-                    </div>
-                    <svg class="cart_close" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 18 18" fill="none">
-                        <path
-                            d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                            fill="#575757" />
-                    </svg>
-                </div>
+    <div class="registration_content center">
+        <form class="registration_content__form">
+            <p class="registration_content__form__label">Your Name</p>
+            <input type="text" class="registration_content__form__input_text" placeholder="First Name"/>
+            <input type="text" class="registration_content__form__input_text" placeholder="Last Name"/>
+            <div class="registration_content__form__gender">
+                <input type="radio" name="group1" class="registration_content__form__gender__radio" value="Male"/><p class="registration_content__form__gender__label">Male</p>
+                <input type="radio" name="group1" class="registration_content__form__gender__radio" value="Female"/><p class="registration_content__form__gender__label">Female</p>
             </div>
-            <div class="cart_actions">
-                <p class="cart_action">CLEAR SHOPPING CART</p>
-                <p class="cart_action">CONTINUE SHOPPING</p>
-            </div>
-        </div>
-        <div class="cart_form_and_total">
-            <form class="cart_form">
-                <h4 class="cart_form_header">SHIPPING ADRESS</h4>
-                <input type="text" class="cart_form_input" placeholder="Bangladesh" />
-                <input type="text" class="cart_form_input" placeholder="State" />
-                <input type="text" class="cart_form_input" placeholder="Postcode / Zip" />
-                <p class="cart_get_a_quote">GET A QUOTE</p>
-            </form>
-            <div class="cart_total">
-                <pre class="cart_total_subtotal">SUB TOTAL    $900</pre>
-                <pre class="cart_total_gradtotal">GRAND TOTAL   <span class="pink heavy">$900</span></pre>
-                <div class="cart_total_divider"></div>
-                <p class="cart_total_action">PROCEED TO CHECKOUT</p>
-            </div>
+            <p class="registration_content__form__label">Login details</p>
+            <input type="email" class="registration_content__form__input_text" placeholder="Email"/>
+            <input type="password" class="registration_content__form__input_text" placeholder="Password"/>
+            <p class="registration_content__form__caption">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+            <pre class="registration_content__form__action">JOIN NOW   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" fill="#A4A4A4"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" fill="#A4A4A4"/>
+                </svg></pre>
+        </form>
+        <div class="registration_content__loyalty">
+            <h3 class="registration_content__loyalty__label">LOYALTY HAS ITS PERKS</h3>
+            <p class="registration_content__loyalty__label">Get in on the loyalty program where you can earn points and unlock serious
+                perks. Starting with these as soon as you join:</p>
+            <pre class="registration_content__loyalty__label registration_content__loyalty__ULI">  15% off welcome offer</pre>
+            <pre class="registration_content__loyalty__label registration_content__loyalty__ULI">  Free shipping, returns and exchanges on all orders</pre>
+            <pre class="registration_content__loyalty__label registration_content__loyalty__ULI">  $10 off a purchase on your birthday</pre>
+            <pre class="registration_content__loyalty__label registration_content__loyalty__ULI">  Early access to products</pre>
+            <pre class="registration_content__loyalty__label registration_content__loyalty__ULI">  Exclusive offers & rewards</pre>
         </div>
     </div>
     <section class="subscribe center">

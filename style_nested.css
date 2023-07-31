@@ -1,0 +1,95 @@
+.registration_content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 64px;
+  padding-bottom: 96px;
+  gap: 128px;
+}
+.registration_content__form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.registration_content__form__label {
+  color: #222;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration_content__form__input_text {
+  padding: 12px 0 15px 16px;
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border: 1px solid #B1B1B1;
+}
+.registration_content__form__gender {
+  display: flex;
+}
+.registration_content__form__gender__radio {
+  margin-right: 10px;
+}
+.registration_content__form__gender__label {
+  color: #000;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-right: 20px;
+}
+.registration_content__form__caption {
+  color: #B1B1B1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration_content__form__action {
+  max-width: 167px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #4A4A4A;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  line-height: normal;
+  border: 1px solid #A4A4A4;
+  transition: all 0.3s ease;
+}
+.registration_content__form__action:hover {
+  color: white;
+  background-color: #F16D7F;
+  border: 1px solid 0;
+}
+.registration_content__form__action svg path {
+  transition: all 0.3s ease;
+}
+.registration_content__form__action:hover svg path {
+  fill: white;
+}
+.registration_content__loyalty {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.registration_content__loyalty__label {
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration_content__loyalty__ULI::before {
+  content: url(img/checked.svg);
+}

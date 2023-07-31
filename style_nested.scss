@@ -1,0 +1,111 @@
+@import 'variables';
+
+.registration_content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    gap: 128px;
+
+    &__form {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        &__label {
+            color: #222;
+            font-family: Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__input_text {
+            padding: 12px 0 15px 16px;
+            color: #B1B1B1;
+            font-family: Lato;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            border: 1px solid #B1B1B1;
+        }
+
+        &__gender {
+            display: flex;
+
+            &__radio {      
+                margin-right: 10px;
+            }
+
+            &__label {
+                color: #000;
+                font-family: Lato;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                margin-right: 20px;
+            }
+        }
+
+        &__caption {
+            color: #B1B1B1;
+            font-family: Lato;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__action {
+            max-width: 167px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #4A4A4A;
+            font-family: Lato;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            text-align: center;
+            line-height: normal;
+            border: 1px solid #A4A4A4;
+            transition: all 0.3s ease;
+        }
+
+        &__action:hover {
+            color: white;
+            background-color: $pink-color;
+            border: 1px solid red($color: #000000);
+        }
+
+        &__action svg path {
+            transition: all 0.3s ease;
+        }
+
+        &__action:hover svg path {
+            fill: white;
+        }
+    }
+
+    &__loyalty {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        &__label {
+            color: #000;
+            font-family: Lato;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__ULI::before {
+            content: url(img/checked.svg);
+        }
+    }
+}
