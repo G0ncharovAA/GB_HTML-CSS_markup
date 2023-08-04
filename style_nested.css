@@ -4,9 +4,13 @@
   align-items: start;
   padding-top: 64px;
   padding-bottom: 96px;
-  gap: 128px;
+  -moz-column-gap: 128px;
+       column-gap: 128px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 }
 .registration_content__form {
+  max-width: 360px;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -78,6 +82,7 @@
   fill: white;
 }
 .registration_content__loyalty {
+  max-width: 360px;
   display: flex;
   gap: 20px;
   flex-direction: column;

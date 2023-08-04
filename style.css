@@ -1247,6 +1247,17 @@ summary::-webkit-details-marker {
   .header__right {
     margin-right: 32px;
   }
+  .cart_content {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .head__heading {
+    margin-left: 40px;
+  }
+  .breadcrumb {
+    margin-right: 40px;
+  }
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .header__left {

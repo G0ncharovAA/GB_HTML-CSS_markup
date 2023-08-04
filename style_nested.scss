@@ -6,9 +6,12 @@
     align-items: start;
     padding-top: 64px;
     padding-bottom: 96px;
-    gap: 128px;
+    column-gap: 128px;
+    row-gap: 20px;
+    flex-wrap: wrap;
 
     &__form {
+        max-width: 360px;
         display: flex;
         gap: 20px;
         flex-direction: column;
@@ -91,6 +94,7 @@
     }
 
     &__loyalty {
+        max-width: 360px;
         display: flex;
         gap: 20px;
         flex-direction: column;
