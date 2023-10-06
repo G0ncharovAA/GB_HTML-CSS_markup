@@ -3,36 +3,42 @@
 const featuredIems = `[
   {
     "image": "img/product1.jpg",
+    "color" : "Red",
     "title": "ELLERY X M'O CAPSULE",
     "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": "$52.00"
   },
   {
     "image": "img/product2.png",
+    "color" : "Black",
     "title": "ELLERY X M'O CAPSULE",
     "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": "$52.00"
   },
   {
     "image": "img/product3.png",
+    "color" : "Red",
     "title": "ELLERY X M'O CAPSULE",
     "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": "$52.00"
   },
   {
     "image": "img/product4.png",
+    "color" : "Black",
     "title": "ELLERY X M'O CAPSULE",
     "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": "$52.00"
   },
   {
     "image": "img/product5.png",
+    "color" : "Red",
     "title": "ELLERY X M'O CAPSULE",
     "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": "$52.00"
   },
   {
     "image": "img/product6.png",
+    "color" : "Black",
     "title": "ELLERY X M'O CAPSULE",
     "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": "$52.00"
@@ -67,6 +73,10 @@ function generateCard(cardData, container) {
   const addLink = document.createElement("a");
   addLink.classList.add("product__add");
   addLink.href = "#";
+  addLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    onAddClick(cardData);
+  });
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("width", "27");
@@ -111,10 +121,114 @@ function generateCard(cardData, container) {
   container.appendChild(card);
 }
 
+function addCartItem(cardData) {
+  const container = document.querySelector(`.cart-items-container`);
+  const card = document.createElement("div");
+  card.classList.add("cart_card");
+
+  const image = document.createElement("img");
+  image.classList.add("cart_img");
+  image.src = cardData.image;
+  image.alt = "";
+
+  const details = document.createElement("div");
+  details.classList.add("cart_details");
+
+  const header = document.createElement("h2");
+  header.classList.add("cart_item_header");
+  header.textContent = cardData.title;
+
+  const price = document.createElement("p");
+  price.classList.add("cart_item_price");
+  price.innerHTML = `Price: <span class="pink">${cardData.price}</span>`;
+
+  const colorDetails = document.createElement("p");
+  colorDetails.classList.add("cart_item_details");
+  colorDetails.innerHTML = `Color: <span class="grey">${cardData.color}</span>`;
+
+  const sizeDetails = document.createElement("p");
+  sizeDetails.classList.add("cart_item_details");
+  sizeDetails.innerHTML = 'Size: <span class="grey">Xl</span>';
+
+  const quantityContainer = document.createElement("div");
+  quantityContainer.classList.add("cart_item_quantity_container");
+
+  const quantityText = document.createElement("p");
+  quantityText.classList.add("cart_item_details");
+  quantityText.textContent = "Quantity:";
+
+  const quantityInput = document.createElement("input");
+  quantityInput.classList.add("cart_item_quantity_input");
+  quantityInput.type = "text";
+  quantityInput.value = "1";
+
+  const closeBtn = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "svg"
+  );
+  closeBtn.classList.add("cart_close");
+  closeBtn.setAttribute("width", "18");
+  closeBtn.setAttribute("height", "18");
+  closeBtn.setAttribute("viewBox", "0 0 18 18");
+  closeBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    onRemoveClick(card);
+  });
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute(
+    "d",
+    "M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+  );
+  path.setAttribute("fill", "#575757");
+
+  closeBtn.appendChild(path);
+
+  card.appendChild(image);
+
+  details.appendChild(header);
+  details.appendChild(price);
+  details.appendChild(colorDetails);
+  details.appendChild(sizeDetails);
+
+  quantityContainer.appendChild(quantityText);
+  quantityContainer.appendChild(quantityInput);
+
+  details.appendChild(quantityContainer);
+
+  card.appendChild(details);
+  card.appendChild(closeBtn);
+
+  container.appendChild(card);
+}
+
 function displayFeatured() {
   const data = JSON.parse(featuredIems);
   const container = document.querySelector(`.product-box__content`);
   data.map((item) => generateCard(item, container));
+}
+
+function showHideCart(show) {
+  const container = document.querySelector(`.cart-container`);
+  show
+    ? (container.style.display = `flex`)
+    : (container.style.display = `none`);
+}
+
+function checkForCartItems() {
+  const container = document.querySelector(`.cart-items-container`);
+  showHideCart(container.childElementCount != 0);
+}
+
+function onAddClick(item) {
+  addCartItem(item);
+  checkForCartItems();
+}
+
+function onRemoveClick(card) {
+  const container = document.querySelector(`.cart-items-container`);
+  container.removeChild(card);
+  checkForCartItems();
 }
 
 displayFeatured();
